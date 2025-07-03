@@ -1,0 +1,118 @@
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 590px;
+  background: var(--green-dark);
+  padding: 0;
+}
+
+.heroContent {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 64px;
+  color: var(--white);
+  min-width: 0;
+}
+
+.heroTitle {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 0 0 18px 0;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-shadow: none;
+}
+
+.heroInfo {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heroButton {
+  margin-top: 20px;
+  width: fit-content;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0 38px;
+  height: 48px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
+}
+.heroButton:hover {
+  background: #e6ae10;
+  box-shadow: 0 2px 14px 0 rgba(255, 194, 27, 0.17);
+  color: var(--black);
+}
+
+.heroImageWrapper {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-width: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 330px;
+  max-height: 600px;
+  aspect-ratio: 1/1;
+  border-radius: 0;
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    min-height: 410px;
+  }
+  .heroContent {
+    padding: 38px 24px 16px 24px;
+  }
+  .heroImageWrapper {
+    min-height: 220px;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroContent {
+    padding: 22px 12px 8px 12px;
+  }
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .heroImage {
+    min-height: 150px;
+    max-height: 250px;
+  }
+  .heroButton {
+    width: 100%;
+    padding: 0px;
+    font-size: 0.95rem;
+  }
+}
