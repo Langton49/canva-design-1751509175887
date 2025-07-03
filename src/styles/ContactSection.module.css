@@ -1,0 +1,117 @@
+.contactSection {
+  background: var(--green-dark);
+  min-height: 470px;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+}
+
+.contactContent {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 64px;
+  min-width: 0;
+}
+
+.contactHeadline {
+  font-size: 2.25rem;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 800;
+  margin: 0 0 38px 0;
+  color: var(--white);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 44px;
+}
+
+.contactLink {
+  color: var(--white);
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+.contactLink:hover {
+  color: var(--yellow);
+}
+
+.contactButton {
+  margin-top: 10px;
+  width: fit-content;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0 32px;
+  height: 42px;
+  border-radius: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: none;
+}
+
+.contactButton:hover {
+  background: #e6ae10;
+  box-shadow: 0 2px 14px 0 rgba(255, 194, 27, 0.14);
+}
+
+.contactImageWrapper {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.contactImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 0;
+}
+
+@media (max-width: 900px) {
+  .contactSection {
+    flex-direction: column;
+    min-height: 310px;
+  }
+  .contactContent {
+    padding: 38px 24px 18px 24px;
+    align-items: flex-start;
+  }
+  .contactImageWrapper {
+    min-height: 170px;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactContent {
+    padding: 20px 12px 10px 12px;
+  }
+  .contactHeadline {
+    font-size: 1.18rem;
+  }
+  .contactButton {
+    width: 100%;
+    padding: 0px;
+    font-size: 0.92rem;
+  }
+  .contactImage {
+    min-height: 110px;
+  }
+}
